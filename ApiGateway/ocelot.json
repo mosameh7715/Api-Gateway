@@ -14,28 +14,28 @@
                     "Port": 7161
                 }
             ],
-            "RateLimitOptions": {
-                "EnableRateLimiting": true,
-                "Period": "15s",
-                "PeriodTimespan": 5,
-                "Limit": 3
-            },
-            "FileCacheOptions": {
-                "TtlSeconds": 5,
-                "Region": "Development"
-            },
-            "AuthenticationOptions": {
-                "AuthenticationProviderKey": "Bearer",
-                "AllowedScopes": [
-                    "api1"
-                ]
-            },
-            "QoSOptions": {
-                "ExceptionsAllowedBeforeBreaking": 1,
-                "DurationOfBreak": 10000,
-                "TimeoutValue": 10000
-            },
-            "Key": "Elnady"
+            //"RateLimitOptions": {
+            //    "EnableRateLimiting": true,
+            //    "Period": "15s",
+            //    "PeriodTimespan": 5,
+            //    "Limit": 3
+            //},
+            //"FileCacheOptions": {
+            //    "TtlSeconds": 5,
+            //    "Region": "Development"
+            //},
+            //"AuthenticationOptions": {
+            //    "AuthenticationProviderKey": "Bearer",
+            //    "AllowedScopes": [
+            //        "api1"
+            //    ]
+            //},
+            //"QoSOptions": {
+            //    "ExceptionsAllowedBeforeBreaking": 1,
+            //    "DurationOfBreak": 10000,
+            //    "TimeoutValue": 10000
+            //},
+            "Key": "Movie"
         },
         {
             "UpstreamPathTemplate": "/myseries",
@@ -48,36 +48,36 @@
                     "Port": 7150
                 }
             ],
-            "RateLimitOptions": {
-                "EnableRateLimiting": true,
-                "Period": "15s",
-                "PeriodTimespan": 5,
-                "Limit": 3
-            },
-            "FileCacheOptions": {
-                "TtlSeconds": 5,
-                "Region": "Development"
-            },
-            "AuthenticationOptions": {
-                "AuthenticationProviderKey": "Bearer",
-                "AllowedScopes": [
-                    "api2"
-                ]
-            },
-            "QoSOptions": {
-                "ExceptionsAllowedBeforeBreaking": 1,
-                "DurationOfBreak": 10000,
-                "TimeoutValue": 10000
-            },
-            "Key": "Salem"
+            //"RateLimitOptions": {
+            //    "EnableRateLimiting": true,
+            //    "Period": "15s",
+            //    "PeriodTimespan": 5,
+            //    "Limit": 3
+            //},
+            //"FileCacheOptions": {
+            //    "TtlSeconds": 5,
+            //    "Region": "Development"
+            //},
+            //"AuthenticationOptions": {
+            //    "AuthenticationProviderKey": "Bearer",
+            //    "AllowedScopes": [
+            //        "api2"
+            //    ]
+            //},
+            //"QoSOptions": {
+            //    "ExceptionsAllowedBeforeBreaking": 1,
+            //    "DurationOfBreak": 10000,
+            //    "TimeoutValue": 10000
+            //}
+            "Key": "Serie"
         }
     ],
     "Aggregates": [
         {
             "UpstreamPathTemplate": "/agg",
             "RouteKeys": [
-                "Elnady",
-                "Salem"
+                "Movie",
+                "Serie"
             ]
         }
     ]

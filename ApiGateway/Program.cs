@@ -2,7 +2,6 @@ using Ocelot.Cache.CacheManager;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.Provider.Polly;
-using Ocelot.Values;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +20,7 @@ builder.Services.AddAuthentication("Bearer")
 		options.TokenValidationParameters.ValidateAudience = false;
 	});
 
-/**CUSTOME CONFIGURATIONS FOR OCELOT CACHING**/
+/**CUSTOME CONFIGURATIONS FOR OCELOT CACHING And QoS**/
 builder.Services.AddOcelot(builder.Configuration)
 	.AddCacheManager(x =>
 	{

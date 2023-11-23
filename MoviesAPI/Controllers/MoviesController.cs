@@ -21,7 +21,6 @@ namespace MoviesAPI.Controllers
         public ActionResult Get()
         {
             var rng = new Random();
-            
             return Ok(Movies[rng.Next(Movies.Length)]);
         }
     }
